@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   plugins: [
-    {
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-styled-components`,
       `gatsby-plugin-sharp`,
@@ -18,7 +17,6 @@ module.exports = {
           background_color: '#020c1b',
           theme_color: '#0a192f',
           display: 'minimal-ui',
-          icon: 'src/images/logo.png',
         },
     },
     {

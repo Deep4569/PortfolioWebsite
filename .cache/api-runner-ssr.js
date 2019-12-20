@@ -1,4 +1,16 @@
-var plugins = []
+var plugins = [{
+      plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"DeepPatel","short_name":"DeepPatel","start_url":"/","background_color":"#020c1b","theme_color":"#0a192f","display":"minimal-ui"},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
