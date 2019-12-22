@@ -1,6 +1,11 @@
 const path = require('path');
+const config = require('./src/config');
 
 module.exports = {
+  siteMetadata: {
+    title: config.siteTitle,
+    description: config.siteDescription,
+  },
   plugins: [
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-styled-components`,
