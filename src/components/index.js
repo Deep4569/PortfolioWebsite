@@ -2,9 +2,18 @@ import Loader from './loading';
 import Layout from './layout';
 import Menu from './menu';
 import Nav from './nav';
+import Social from './social';
+import Hero from './hero';
+import About from './about';
+import Email from './email';
+
 export {
   Layout,
   Menu,
   Nav,
-  Loader
+  Social,
+  Loader,
+  Hero,
+  About,
+  Email
 };

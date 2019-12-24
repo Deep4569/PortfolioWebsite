@@ -21,6 +21,19 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+  	border-radius: 10px;
+  	background-color: #64FFDA;
+  }
+  ::-webkit-scrollbar-track {
+  	border-radius: 10px;
+  	background-color: #0A192F;
+  }
+
+
   body {
     margin: 0;
     width: 100%;
