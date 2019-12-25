@@ -6,6 +6,7 @@ import Social from './social';
 import Hero from './hero';
 import About from './about';
 import Email from './email';
+import Skills from './skills';
 
 export {
   Layout,
@@ -15,5 +16,6 @@ export {
   Loader,
   Hero,
   About,
-  Email
+  Email,
+  Skills
 };

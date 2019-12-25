@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About } from '@components';
+import { Layout, Hero, About, Skills } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -14,6 +14,7 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Skills data={data.skills.edges} />
     </StyledMainContainer>
   </Layout>
 );
@@ -54,6 +55,26 @@ export const query = graphql`
               }
             }
             skills
+          }
+          html
+        }
+      }
+    }
+    skills: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skills/" } } ) {
+      edges {
+        node {
+          frontmatter {
+            skillType
+            names
+            icons {
+              src {
+                  childImageSharp {
+                  fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
+            }
           }
           html
         }
