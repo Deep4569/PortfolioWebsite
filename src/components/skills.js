@@ -140,8 +140,16 @@ const StyledIcon = styled.div`
   float:left;
   text-align:center;
   max-width: 80px;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+  &:hover,
+  &:focus {
+    filter: none;
+  }
 `;
 
+const StyledName = styled.p`
+  color: ${colors.green}
+`;
 
 const Skills = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
@@ -193,7 +201,7 @@ const Skills = ({ data }) => {
                 {icons.map((icons,i) =>
                   <StyledIcon>
                     <img src={icons.src.childImageSharp.fluid.src} key={i}/>
-                    <p>{names[i]}</p>
+                    <StyledName>{names[i]}</StyledName>
                   </StyledIcon>
                 )}
 
