@@ -20,7 +20,10 @@ const GlobalStyle = createGlobalStyle`
   *:after {
     box-sizing: inherit;
   }
-
+  *:focus {
+  outline: 0;
+  outline: none;
+  }
   ::-webkit-scrollbar {
     width: 4px;
   }

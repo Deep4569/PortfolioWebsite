@@ -135,11 +135,16 @@ const StyledTabContent = styled.div`
     ${mixins.inlineLink};
   }
 `;
+const StyledHolder = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 const StyledIcon = styled.div`
   float:left;
   text-align:center;
   max-width: 80px;
+  padding-right: 5px;
   filter: grayscale(100%) contrast(1) brightness(90%);
   &:hover,
   &:focus {
@@ -148,6 +153,7 @@ const StyledIcon = styled.div`
 `;
 
 const StyledName = styled.p`
+  overflow-x: wrap;
   color: ${colors.green}
 `;
 
@@ -198,13 +204,16 @@ const Skills = ({ data }) => {
                 hidden={activeTabId !== i}>
                 {console.log({icons})}
                 {console.log({names})}
+                <StyledHolder>
                 {icons.map((icons,i) =>
-                  <StyledIcon>
-                    <img src={icons.src.childImageSharp.fluid.src} key={i}/>
-                    <StyledName>{names[i]}</StyledName>
-                  </StyledIcon>
-                )}
 
+                    <StyledIcon>
+                      <img src={icons.src.childImageSharp.fluid.src} key={i}/>
+                      <StyledName>{names[i]}</StyledName>
+                    </StyledIcon>
+
+                )}
+              </StyledHolder>
             </StyledTabContent>
           );
         })}

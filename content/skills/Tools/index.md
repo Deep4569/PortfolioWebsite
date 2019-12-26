@@ -1,10 +1,22 @@
 ---
+id: 2
+
 skillType: 'Tools'
 
 names:
-  - 'java'
+  - 'Office'
+  - 'Elicpse'
+  - 'Atom'
+  - 'Enterprise Architect'
+  - 'Git'
+  - 'Photoshop'
 
 icons:
-  - src: ./java.png
+  - src: ./office.png
+  - src: ./elcipse.png
+  - src: ./atom.png
+  - src: ./enterprise.png
+  - src: ./git.png
+  - src: ./photoshop.png
 
 ---

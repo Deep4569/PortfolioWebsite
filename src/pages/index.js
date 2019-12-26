@@ -60,10 +60,14 @@ export const query = graphql`
         }
       }
     }
-    skills: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skills/" } } ) {
+    skills: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/skills/" }}
+      sort: { fields: [frontmatter___id] }
+    ) {
       edges {
         node {
           frontmatter {
+            id
             skillType
             names
             icons {
