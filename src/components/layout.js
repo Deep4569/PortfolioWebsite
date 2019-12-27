@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Loader, Nav, Social, Email } from '@components';
+import { Loader, Nav, Social, Email, LightMode } from '@components';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -91,6 +91,7 @@ const Layout = ({ children, location }) => {
             <StyledContent>
               <Nav isHome={isHome} />
               <Email isHome={isHome} />
+              <LightMode isHome={isHome} />
               <Social isHome={isHome} />
 
 

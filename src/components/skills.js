@@ -202,16 +202,12 @@ const Skills = ({ data }) => {
                 aria-labelledby={`tab-${i}`}
                 tabIndex={activeTabId === i ? '0' : '-1'}
                 hidden={activeTabId !== i}>
-                {console.log({icons})}
-                {console.log({names})}
                 <StyledHolder>
                 {icons.map((icons,i) =>
-
                     <StyledIcon>
                       <img src={icons.src.childImageSharp.fluid.src} key={i}/>
                       <StyledName>{names[i]}</StyledName>
                     </StyledIcon>
-
                 )}
               </StyledHolder>
             </StyledTabContent>

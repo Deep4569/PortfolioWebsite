@@ -7,7 +7,7 @@ import Hero from './hero';
 import About from './about';
 import Email from './email';
 import Skills from './skills';
-
+import LightMode from './lightMode';
 export {
   Layout,
   Menu,
@@ -17,5 +17,6 @@ export {
   Hero,
   About,
   Email,
-  Skills
+  Skills,
+  LightMode,
 };
