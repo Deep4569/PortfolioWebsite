@@ -10,7 +10,7 @@ names:
 
 icons:
   - src: ./js.png
-  - src: ./C#.png
+  - src: ./C.png
   - src: ./C++.png
 
 ---
