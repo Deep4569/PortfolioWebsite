@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { SunLogo, MoonLogo } from '@components/icons'
 import styled from 'styled-components';
+import { currentTheme } from '@config';
 import { theme, media } from '@styles';
-const { colors} = theme;
+const { colors } = theme;
 
 const StyledContainer = styled.div`
   width: 50px;
@@ -13,7 +14,6 @@ const StyledContainer = styled.div`
   ${media.desktop`right: 25px;`};
   ${media.tablet`display: none;`};
 `;
-
 const StyledIcon = styled.a``;
 
 class LightMode extends Component{
@@ -33,6 +33,7 @@ class LightMode extends Component{
         <StyledContainer>
           <StyledIcon>
             {this.state.isLight ? <SunLogo/> : <MoonLogo/>}
+            {console.log(((currentTheme == 'light') && this.state.isLight) ? 'light' : 'dark')}
           </StyledIcon>
         </StyledContainer>
       </div>

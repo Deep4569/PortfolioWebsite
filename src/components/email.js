@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
 import styled from 'styled-components';
 import { theme, media } from '@styles';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.div`
