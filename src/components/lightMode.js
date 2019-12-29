@@ -33,7 +33,6 @@ class LightMode extends Component{
         <StyledContainer>
           <StyledIcon>
             {this.state.isLight ? <SunLogo/> : <MoonLogo/>}
-            {console.log(((currentTheme == 'light') && this.state.isLight) ? 'light' : 'dark')}
           </StyledIcon>
         </StyledContainer>
       </div>
