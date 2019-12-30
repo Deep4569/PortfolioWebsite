@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Skills } from '@components';
+import { Layout, Hero, About, Skills, Experience } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -15,6 +15,7 @@ const IndexPage = ({ location, data }) => (
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
       <Skills data={data.skills.edges} />
+      <Experience data={data.experience.edges} />
     </StyledMainContainer>
   </Layout>
 );
@@ -79,6 +80,23 @@ export const query = graphql`
                 }
               }
             }
+          }
+          html
+        }
+      }
+    }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
           }
           html
         }

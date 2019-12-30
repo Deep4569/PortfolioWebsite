@@ -93,8 +93,6 @@ const Layout = ({ children, location }) => {
               <Email isHome={isHome} />
               <LightMode isHome={isHome} />
               <Social isHome={isHome} />
-
-
               <div id="content">
                 {children}
               </div>
