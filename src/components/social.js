@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { socialMedia } from '@config';
-import { IconGitHub } from '@components/icons';
+import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
 import { theme, media } from '@styles';
 const { colors } = theme;
@@ -76,7 +76,7 @@ const Social = ({ isHome }) => {
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label={name}>
-                      <IconGitHub/>
+                      <FormattedIcon name={name} />
                     </StyledLink>
                   </StyledListItem>
                 ))}
@@ -86,7 +86,7 @@ const Social = ({ isHome }) => {
       </TransitionGroup>
     </StyledContainer>
   );
-};
+  };
 
 Social.propTypes = {
   isHome: PropTypes.bool,
