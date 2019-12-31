@@ -6,6 +6,8 @@ import MoonLogo from './moon'
 import IconInstagram from './instagram';
 import IconLinkedin from './linkedin';
 import FormattedIcon from './formattedIcon';
+import IconExternal from './external';
+import IconFolder from './folder';
 
 export{
   LogoLoader,
@@ -15,5 +17,7 @@ export{
   MoonLogo,
   IconInstagram,
   IconLinkedin,
-  FormattedIcon
+  FormattedIcon,
+  IconExternal,
+  IconFolder
 };

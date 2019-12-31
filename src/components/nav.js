@@ -244,11 +244,11 @@ class Nav extends Component {
               <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? 3000 : 0}>
                 <StyledLogo tabindex="-1">
                   {isHome ? (
-                    <a href="/" aria-label="home">
+                    <a href="#" aria-label="home">
                     <IconLogo />
                     </a>
                   ) : (
-                    <Link to="/" aria-label="home">
+                    <Link to="#" aria-label="home">
                     <IconLogo />
                     </Link>
                   )}
