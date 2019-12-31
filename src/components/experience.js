@@ -162,7 +162,7 @@ const Experience = ({ data }) => {
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
   return (
-    <StyledContainer id="jobs" ref={revealContainer}>
+    <StyledContainer id="experience" ref={revealContainer}>
       <Heading>Where I&apos;ve Worked</Heading>
       <StyledTabs>
         <StyledTabList role="tablist" aria-label="Job tabs">

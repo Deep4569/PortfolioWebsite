@@ -165,7 +165,7 @@ const Skills = ({ data }) => {
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
   return (
-    <StyledContainer id="jobs" ref={revealContainer}>
+    <StyledContainer id="skills" ref={revealContainer}>
       <Heading>Skills</Heading>
       <StyledTabs>
         <StyledTabList role="tablist" aria-label="Job tabs">
