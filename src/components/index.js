@@ -9,7 +9,8 @@ import Email from './email';
 import Skills from './skills';
 import LightMode from './lightMode';
 import Experience from './experience';
-import Projects from './projects'
+import Projects from './projects';
+import Contact from './contact';
 
 export {
   Layout,
@@ -24,4 +25,5 @@ export {
   LightMode,
   Experience,
   Projects,
+  Contact,
 };

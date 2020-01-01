@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { SunLogo, MoonLogo } from '@components/icons'
 import styled from 'styled-components';
-import { currentTheme } from '@config';
 import { theme, media } from '@styles';
 const { colors } = theme;
 
@@ -25,6 +24,7 @@ class LightMode extends Component{
 
   handleClick(){
       this.setState(prevState => ({ isLight: !prevState.isLight }));
+      this.props.onClick();
   }
 
   render(){

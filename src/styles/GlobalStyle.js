@@ -9,7 +9,6 @@ const { colors, fontSizes, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
   ${FontFaces};
-
   html {
     box-sizing: border-box;
     width: 100%;

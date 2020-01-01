@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Loader, Nav, Social, Email, LightMode } from '@components';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
-const { colors, fontSizes, fonts } = theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -12,38 +11,6 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-const SkipToContent = styled.a`
-  position: absolute;
-  top: auto;
-  left: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -99;
-  &:hover {
-    background-color: ${colors.darkGrey};
-  }
-  &:focus,
-  &:active {
-    outline: 0;
-    color: ${colors.green};
-    background-color: ${colors.lightNavy};
-    border-radius: ${theme.borderRadius};
-    padding: 18px 23px;
-    font-size: ${fontSizes.sm};
-    font-family: ${fonts.SFMono};
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: ${theme.transition};
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    z-index: 99;
-  }
-`;
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,7 +20,17 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  const [theme, setTheme] = useState('dark');
 
+  const toggleTheme = () => {
+      if (theme === 'light') {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    }
+
+    {console.log(theme)}
   useEffect(() => {
     if (isLoading || isHome) {
       return;
@@ -84,14 +61,13 @@ const Layout = ({ children, location }) => {
       render={({ site }) => (
         <div id="root">
           <GlobalStyle />
-          <SkipToContent href="#content">Skip to Content</SkipToContent>
           {isLoading && isHome ? (
             <Loader finishLoading={() => setIsLoading(false)} />
             ) : (
             <StyledContent>
               <Nav isHome={isHome} />
               <Email isHome={isHome} />
-              <LightMode isHome={isHome} />
+              <LightMode isHome={isHome} onClick={toggleTheme} />
               <Social isHome={isHome} />
               <div id="content">
                 {children}
