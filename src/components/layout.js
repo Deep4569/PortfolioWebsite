@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Loader, Nav, Social, Email, LightMode } from '@components';
+import { Loader, Nav, Social, Email } from '@components';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
 
@@ -20,17 +20,6 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
-  const [theme, setTheme] = useState('dark');
-
-  const toggleTheme = () => {
-      if (theme === 'light') {
-        setTheme('dark');
-      } else {
-        setTheme('light');
-      }
-    }
-
-    {console.log(theme)}
   useEffect(() => {
     if (isLoading || isHome) {
       return;
@@ -67,7 +56,6 @@ const Layout = ({ children, location }) => {
             <StyledContent>
               <Nav isHome={isHome} />
               <Email isHome={isHome} />
-              <LightMode isHome={isHome} onClick={toggleTheme} />
               <Social isHome={isHome} />
               <div id="content">
                 {children}
