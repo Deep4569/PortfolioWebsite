@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import { Main } from '@styles';
 
 const StyledMainContainer = styled(Main)`
-  counter-reset: section;
 `;
 
 const IndexPage = ({ location, data }) => (
@@ -89,7 +88,7 @@ export const query = graphql`
     }
     experience: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/experience/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date] }
     ) {
       edges {
         node {

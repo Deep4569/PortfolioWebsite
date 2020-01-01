@@ -8,4 +8,4 @@ tech:
 showInProjects: true
 ---
 
-A simple Sudoku solver that uses the [backtracking](https://en.wikipedia.org/wiki/Backtracking) algorithm to solve any puzzle regardless of the difficulty.
+A simple Sudoku solver that uses the [backtracking](https://medium.com/@andreaiacono/backtracking-explained-7450d6ef9e1a) algorithm to solve any puzzle regardless of the difficulty.
