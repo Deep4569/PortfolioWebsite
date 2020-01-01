@@ -10,6 +10,7 @@ module.exports = {
   location: 'Toronto, CA',
   email: 'deep4569@gmail.com',
   github: 'https://github.com/Deep4569',
+  googleAnalyticsID: 'UA-155160893-1',
   socialMedia: [
     {
       name: 'GitHub',
