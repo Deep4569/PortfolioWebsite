@@ -39,12 +39,10 @@ const StyledPic = styled.div`
 `;
 const StyledAvatar = styled(Img)`
   position: relative;
-  opacity: 1;
 `;
 const StyledAvatarLink = styled.a`
   width: 100%;
   position: relative;
-  opacity: 0;
   &:before,
   &:after {
     content: '';
