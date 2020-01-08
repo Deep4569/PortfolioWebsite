@@ -13,6 +13,9 @@ var plugins = [{
     },{
       plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-155160893-1","head":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

@@ -10,6 +10,7 @@ names:
   - 'Enterprise Architect'
   - 'Git'
   - 'Photoshop'
+  - 'JIRA'
 
 icons:
   - src: ./office.png
@@ -18,5 +19,6 @@ icons:
   - src: ./enterprise.png
   - src: ./git.png
   - src: ./photoshop.png
+  - src: ./jira.png
 
 ---
