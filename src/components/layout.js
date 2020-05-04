@@ -20,7 +20,6 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
-
   const [theme, setTheme] = useState('dark');
 
   const toggleTheme = () => {
@@ -31,8 +30,6 @@ const Layout = ({ children, location }) => {
       }
     }
 
-    {console.log(theme)}
-  
   useEffect(() => {
     if (isLoading || isHome) {
       return;

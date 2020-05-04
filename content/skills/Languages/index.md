@@ -10,6 +10,8 @@ names:
   - 'CSS'
   - 'SQL'
   - 'Bash'
+  - 'C#'
+  - 'C & C++'
 
 icons:
   - src: ./java.png
@@ -18,6 +20,8 @@ icons:
   - src: ./css.png
   - src: ./sql.png
   - src: ./bash.png
+  - src: ./C.png
+  - src: ./C++.png
 
 
 

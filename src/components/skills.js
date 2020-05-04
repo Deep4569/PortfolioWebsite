@@ -9,7 +9,7 @@ const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   position: relative;
-  max-width:500px;
+  max-width:550px;
 `;
 const StyledTabs = styled.div`
   display: flex;

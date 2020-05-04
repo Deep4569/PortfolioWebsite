@@ -24,7 +24,6 @@ class LightMode extends Component{
 
   handleClick(){
       this.setState(prevState => ({ isLight: !prevState.isLight }));
-      this.props.onClick();
   }
 
   render(){
