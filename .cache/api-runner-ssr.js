@@ -9,7 +9,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"DeepPatel","short_name":"DeepPatel","start_url":"/","background_color":"#020c1b","theme_color":"#0a192f","display":"minimal-ui"},
+      options: {"plugins":[],"name":"DeepPatel","short_name":"DeepPatel","start_url":"/","background_color":"#020c1b","theme_color":"#0a192f","display":"minimal-ui","icon":"src/images/logo.png"},
     },{
       plugin: require('F:/personalWebsite/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
