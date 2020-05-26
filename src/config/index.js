@@ -4,7 +4,7 @@ module.exports = {
     'Deep Patel is a software engineer located in Toronto, CA who who enjoys developing, and designing exceptional, high-quality applications.',
   siteKeywords:
     'Deep Patel, Deep, Patel, deep4569, software developer, developer, web developer, python, java, julia',
-  siteUrl: 'https://brittanychiang.com',
+  siteUrl: 'https://dpatel.netlify.app',
   siteLanguage: 'en_US',
   name: 'Deep Patel',
   location: 'Toronto, CA',
