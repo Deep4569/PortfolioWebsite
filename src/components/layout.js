@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { Loader, Nav, Social, Email, LightMode } from '@components';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
+import config from '@config';
+import favicon from '@images/favicons/favicon.ico';
+import Helmet from 'react-helmet';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -20,15 +23,6 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
-  const [theme, setTheme] = useState('dark');
-
-  const toggleTheme = () => {
-      if (theme === 'light') {
-        setTheme('dark');
-      } else {
-        setTheme('light');
-      }
-    }
 
   useEffect(() => {
     if (isLoading || isHome) {
@@ -60,6 +54,20 @@ const Layout = ({ children, location }) => {
       `}
       render={({ site }) => (
         <div id="root">
+
+          <Helmet>
+            <html lang="en"/>
+            <title itemProp="name" lang="en">
+              {site.siteMetadata.title}
+            </title>
+            <link rel="shortcut icon" href={favicon} />
+            <link rel="canonical" href="https://dpatel.netlify.app" />
+
+            <meta name="description" content={site.siteMetadata.description} />
+            <meta name="keywords" content={config.siteKeywords} />
+            <meta name="google-site-verification" content={config.googleVerification} />
+          </Helmet>
+
           <GlobalStyle />
           {isLoading && isHome ? (
             <Loader finishLoading={() => setIsLoading(false)} />
