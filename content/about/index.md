@@ -10,7 +10,7 @@ skills:
   - Julia
 ---
 
-Hello! I'm Deep, a software developer located in Toronto, ON who enjoys building applications.
+Hello! I'm Deep, a software developer based in Toronto, ON who enjoys building applications.
 
 Currently I am studying Computer Science at [Ryerson University](https://www.ryerson.ca/). I am very interested in robotics and machine learning.
 
