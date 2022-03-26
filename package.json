@@ -25,7 +25,7 @@
     "graphql-playground-html": "^1.6.22",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.21",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.6",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
